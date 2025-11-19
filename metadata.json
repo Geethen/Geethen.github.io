@@ -1,0 +1,5 @@
+{
+  "name": "ScholarFolio",
+  "description": "A modern, responsive research portfolio template featuring a markdown blog system, publication tracking, citation visualization, and an AI assistant powered by Gemini to answer questions about your research.",
+  "requestFramePermissions": []
+}
