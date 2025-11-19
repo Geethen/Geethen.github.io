@@ -5,17 +5,19 @@ import { Paper, BlogPost } from './types';
 
 const Layout: React.FC<React.PropsWithChildren> = ({ children }) => {
   return (
-    <div style={{ fontFamily: 'system-ui, sans-serif', margin: '0 auto', maxWidth: 960, padding: '1rem' }}>
-      <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
-        <h1 style={{ margin: 0 }}>{PROFILE.name}</h1>
-        <nav style={{ display: 'flex', gap: '1rem' }}>
-          <a href="#/">Home</a>
-          <a href="#/research">Research</a>
-          <a href="#/blog">Blog</a>
+    <div className="container mx-auto max-w-5xl px-4 py-8">
+      <header className="flex justify-between items-center mb-12 pb-6 border-b border-gray-200">
+        <h1 className="text-3xl font-bold text-gray-900">{PROFILE.name}</h1>
+        <nav className="flex gap-6">
+          <a href="#/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Home</a>
+          <a href="#/research" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Research</a>
+          <a href="#/blog" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Blog</a>
         </nav>
       </header>
       {children}
-      <footer style={{ marginTop: '3rem', fontSize: '0.8rem', opacity: 0.7 }}>© {new Date().getFullYear()} {PROFILE.name}</footer>
+      <footer className="mt-16 pt-8 border-t border-gray-200 text-sm text-gray-600 text-center">
+        © {new Date().getFullYear()} {PROFILE.name}
+      </footer>
     </div>
   );
 };
