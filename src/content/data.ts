@@ -94,7 +94,7 @@ export const blogs: BlogEntry[] = [
     {
         id: "future-ai-ecology",
         title: "The Future of AI in Ecology",
-        date: "December 18, 2025",
+        date: "October 15, 2025",
         summary: "Exploring how generative models and computer vision are redefining environmental science.",
         file: "/content/blogs/future-ai.md",
         tags: ["Future", "AI", "Ecology"]

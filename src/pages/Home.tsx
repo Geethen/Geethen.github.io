@@ -26,8 +26,8 @@ const Home = () => {
                 <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '150px', background: 'linear-gradient(transparent, var(--bg))' }}></div>
             </header>
 
-            <section id="about" style={{ padding: '8rem 0' }}>
-                <div className="container">
+            <section style={{ padding: '8rem 0' }}>
+                <div className="container" id="about">
                     <div className="responsive-grid">
                         <div>
                             <span className="tag">My Mission</span>
@@ -52,7 +52,7 @@ const Home = () => {
                             }}>
                                 <img src="/assets/profile.jpg" alt="Geethen" style={{ width: '100%', height: '100%', minHeight: '400px', objectFit: 'cover' }} />
                             </div>
-                            <div style={{
+                            <div className="profile-badge" style={{
                                 position: 'absolute',
                                 bottom: '-1rem',
                                 right: '-1rem',

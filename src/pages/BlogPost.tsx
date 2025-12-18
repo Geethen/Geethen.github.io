@@ -38,7 +38,7 @@ const BlogPost = () => {
                     <button
                         onClick={() => navigate('/blog')}
                         className="btn btn-outline"
-                        style={{ marginBottom: '2rem' }}
+                        style={{ marginBottom: '2rem', padding: '0.6rem 1.2rem', fontSize: '0.9rem' }}
                     >
                         &larr; Back to Blog
                     </button>
