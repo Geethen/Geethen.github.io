@@ -42,13 +42,14 @@ const Home = () => {
                         <div style={{ position: 'relative' }}>
                             <div style={{
                                 width: '100%',
-                                height: '500px',
+                                height: '520px',
                                 background: 'var(--bg-offset)',
-                                borderRadius: '2rem',
+                                borderRadius: '2.5rem',
                                 overflow: 'hidden',
-                                boxShadow: 'var(--shadow)'
+                                boxShadow: 'var(--shadow)',
+                                border: '4px solid white'
                             }}>
-                                <img src="/assets/remote-sensing.png" alt="Research in action" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                <img src="/assets/profile.jpg" alt="Geethen" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                             </div>
                             <div style={{
                                 position: 'absolute',
@@ -59,10 +60,10 @@ const Home = () => {
                                 padding: '2rem',
                                 borderRadius: '1.5rem',
                                 boxShadow: '0 20px 40px rgba(0,0,0,0.2)',
-                                maxWidth: '250px'
+                                maxWidth: '280px'
                             }}>
-                                <p style={{ fontWeight: 700, fontSize: '1.5rem', marginBottom: '0.5rem' }}>10+</p>
-                                <p style={{ fontSize: '0.9rem', opacity: 0.8 }}>Peer-reviewed publications in top ecological journals.</p>
+                                <p style={{ fontWeight: 700, fontSize: '1.5rem', marginBottom: '0.5rem' }}>Ecologist & AI Researcher</p>
+                                <p style={{ fontSize: '0.9rem', opacity: 0.8 }}>Bridging nature and technology with 10+ peer-reviewed publications.</p>
                             </div>
                         </div>
                     </div>

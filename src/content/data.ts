@@ -7,6 +7,9 @@ export interface Paper {
     tags: string[];
     link?: string;
     file: string;
+    abstract?: string;
+    highlights?: string[];
+    audio?: string; // URL to NotebookLM Deep Dive or similar
 }
 
 export interface BlogEntry {
@@ -47,7 +50,13 @@ export const papers: Paper[] = [
         journal: "Scientific Reports 14 (1), 16166",
         tags: ["Machine Learning", "Probabilistic ML", "Conformal Prediction"],
         file: "/content/research/uncertainty-quantification.md",
-        link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J4rtU2kAAAAJ&citation_for_view=J4rtU2kAAAAJ:2osOgNQ5qMEC"
+        link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J4rtU2kAAAAJ&citation_for_view=J4rtU2kAAAAJ:2osOgNQ5qMEC",
+        highlights: [
+            "Introduces Conformal Prediction for robust EO metrics",
+            "Statistically sound uncertainty intervals for satellite data",
+            "Validated across multiple biome classification tasks"
+        ],
+        audio: "https://www.w3schools.com/html/horse.mp3" // Placeholder for NotebookLM audio
     },
     {
         id: "biodiversity-intactness",
