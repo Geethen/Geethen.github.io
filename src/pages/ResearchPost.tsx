@@ -46,8 +46,8 @@ const ResearchPost = () => {
                     {loading ? (
                         <p>Loading...</p>
                     ) : (
-                        <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 2fr) 1fr', gap: '4rem' }}>
-                            <article className="prose">
+                        <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr)', gap: '4rem' }} className="research-post-grid">
+                            <article className="prose" style={{ maxWidth: '100%' }}>
                                 <div className="pub-year">{paper.date} | {paper.journal}</div>
                                 <h1 style={{ marginBottom: '1.5rem' }}>{paper.title}</h1>
                                 <p style={{ color: 'var(--text-muted)', marginBottom: '3rem', fontSize: '1.1rem' }}>{paper.authors}</p>
@@ -63,7 +63,7 @@ const ResearchPost = () => {
                                 )}
                             </article>
 
-                            <aside>
+                            <aside className="research-sidebar">
                                 {(paper.audio || paper.highlights) && (
                                     <div style={{
                                         position: 'sticky',

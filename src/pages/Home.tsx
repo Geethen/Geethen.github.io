@@ -28,7 +28,7 @@ const Home = () => {
 
             <section id="about" style={{ padding: '8rem 0' }}>
                 <div className="container">
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
+                    <div className="responsive-grid">
                         <div>
                             <span className="tag">My Mission</span>
                             <h2 style={{ fontSize: '3rem', marginBottom: '2rem' }}>Scaling Conservation through Technology</h2>
@@ -42,28 +42,30 @@ const Home = () => {
                         <div style={{ position: 'relative' }}>
                             <div style={{
                                 width: '100%',
-                                height: '520px',
+                                height: 'auto',
+                                minHeight: '400px',
                                 background: 'var(--bg-offset)',
                                 borderRadius: '2.5rem',
                                 overflow: 'hidden',
                                 boxShadow: 'var(--shadow)',
                                 border: '4px solid white'
                             }}>
-                                <img src="/assets/profile.jpg" alt="Geethen" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                <img src="/assets/profile.jpg" alt="Geethen" style={{ width: '100%', height: '100%', minHeight: '400px', objectFit: 'cover' }} />
                             </div>
                             <div style={{
                                 position: 'absolute',
-                                bottom: '-2rem',
-                                right: '-2rem',
+                                bottom: '-1rem',
+                                right: '-1rem',
                                 background: 'var(--primary)',
                                 color: 'white',
-                                padding: '2rem',
+                                padding: '1.5rem',
                                 borderRadius: '1.5rem',
                                 boxShadow: '0 20px 40px rgba(0,0,0,0.2)',
-                                maxWidth: '280px'
+                                maxWidth: '280px',
+                                zIndex: 10
                             }}>
-                                <p style={{ fontWeight: 700, fontSize: '1.5rem', marginBottom: '0.5rem' }}>Ecologist & AI Researcher</p>
-                                <p style={{ fontSize: '0.9rem', opacity: 0.8 }}>Bridging nature and technology with 10+ peer-reviewed publications.</p>
+                                <p style={{ fontWeight: 700, fontSize: '1.2rem', marginBottom: '0.2rem' }}>Ecologist & AI Researcher</p>
+                                <p style={{ fontSize: '0.85rem', opacity: 0.8 }}>Bridging nature and technology with 10+ peer-reviewed publications.</p>
                             </div>
                         </div>
                     </div>

@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <footer style={{ padding: '6rem 0', background: 'var(--primary)', color: 'white' }}>
+        <footer style={{ padding: '4rem 0', background: 'var(--primary)', color: 'white' }}>
             <div className="container">
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '4rem', textAlign: 'left', marginBottom: '4rem' }}>
+                <div className="footer-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '4rem', textAlign: 'left', marginBottom: '4rem' }}>
                     <div>
                         <h3 style={{ color: 'white', marginBottom: '1.5rem' }}>Geethen</h3>
                         <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem' }}>
@@ -29,7 +29,7 @@ const Footer = () => {
                         </ul>
                     </div>
                 </div>
-                <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <div className="footer-bottom" style={{ borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.5)' }}>&copy; {new Date().getFullYear()} Geethen. All rights reserved.</p>
                     <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.5)' }}>Built with passion for the Earth 🌍</p>
                 </div>

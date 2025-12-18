@@ -14,10 +14,10 @@ const Navbar = () => {
                 </Link>
                 <div className="nav-links">
                     <Link to="/" className={isActive('/') ? 'active' : ''}>Home</Link>
-                    <a href="/#about">About</a>
+                    <a href="/#about" className="nav-hide-mobile">About</a>
                     <Link to="/research" className={isActive('/research') ? 'active' : ''}>Research</Link>
                     <Link to="/blog" className={isActive('/blog') ? 'active' : ''}>Blog</Link>
-                    <a href="/#contact" className="btn btn-primary" style={{ padding: '0.5rem 1.2rem', marginLeft: '1rem' }}>Contact</a>
+                    <a href="/#contact" className="btn btn-primary" style={{ padding: '0.5rem 1.2rem', marginLeft: '0.5rem' }}>Contact</a>
                 </div>
             </div>
         </nav>
