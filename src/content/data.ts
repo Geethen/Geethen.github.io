@@ -92,11 +92,11 @@ export const papers: Paper[] = [
 
 export const blogs: BlogEntry[] = [
     {
-        id: "future-ai-ecology",
-        title: "The Future of AI in Ecology",
-        date: "October 15, 2025",
-        summary: "Exploring how generative models and computer vision are redefining environmental science.",
-        file: "/content/blogs/future-ai.md",
-        tags: ["Future", "AI", "Ecology"]
+        id: "common-ground",
+        title: "Common Ground: A Semi-Supervised Approach to Scalable Time-Series Mapping",
+        date: "February 5, 2026",
+        summary: "Introducing a framework that combines unsupervised change detection with semi-supervised learning to automate land cover map updates.",
+        file: "/content/blogs/common_ground_blog.md",
+        tags: ["Semi-Supervised Learning", "Remote Sensing", "Time-Series"]
     }
 ];
