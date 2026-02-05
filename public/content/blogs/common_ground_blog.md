@@ -23,14 +23,10 @@ Stable features (e.g., an established forest, a concrete building) provide a rel
 
 Our framework executes this in two stages:
 
-![Bridging the Gap Illustration](/assets/conservation.png)
-
 1.  **Bridging the Gap:** We use unsupervised change detection algorithms (like IRMAD or CCDC) to separate **Stable** pixels from **Changed** pixels. We then train a "Stage 1" model on the the past (t<sub>0</sub>) and the present (t<sub>1</sub>) stable subset, allowing it to learn how the spectral signature of unchanged classes has shifted over time.
 2.  **Filling in the Blanks:** This Stage 1 model predicts labels for the **Changed** areas (Pseudo-labeling). Finally, a "Stage 2" model is trained on the full dataset— the past (t<sub>0</sub>) + the present (t<sub>1</sub>) stable subset (original labels) + the present (t<sub>1</sub>) changed subset (pseudo-labels)—creating a robust classifier that covers the entire current landscape.
 
 ## Key Results
-
-![Remote Sensing Analysis Results](/assets/remote-sensing.png)
 
 We evaluated Common Ground across three diverse case studies, ranging from fine-scale invasive tree species mapping to continental-scale land cover classification and for both multispectral and hyperspectral data.
 
@@ -56,8 +52,8 @@ Below, we break down how to implement the Common Ground method. We assume you ha
 
 ### Step 1: Detect Change
 Before running the Common Ground algorithm, you need to identify which reference samples have changed. In our paper, we used **IRMAD** (Iteratively Reweighted Multivariate Alteration Detection) or **CCDC** (Continuous Change Detection and Classification) to detect change, but you can use any unsupervised change detection method.
-*   **Stable ($0$):** Use t<sub>0</sub> label for t<sub>1</sub>.
-*   **Changed ($1$):** t<sub>0</sub> label is invalid; needs pseudo-labeling.
+*   **Stable (0):** Use t<sub>0</sub> label for t<sub>1</sub>.
+*   **Changed (1):** t<sub>0</sub> label is invalid; needs pseudo-labeling.
 
 ### Step 2: Stage 1 Training (The Bridge)
 We train the first model on the "trusted" data: all original t<sub>0</sub> data plus the **Stable** subset of t<sub>1</sub>.
@@ -112,15 +108,15 @@ def train_common_ground(df_t0, df_t1, features):
     Trains a Random Forest using the Common Ground SSL framework.
     
     Args:
-        df_t0 (pd.DataFrame): Data from time t0 with 'class' labels.
-        df_t1 (pd.DataFrame): Data from time t1 with 'change' column (0/1) 
-                              and inherited 'class' from t0.
+        df_t0 (pd.DataFrame): Data from time t<sub>0</sub> with 'class' labels.
+        df_t1 (pd.DataFrame): Data from time t<sub>1</sub> with 'change' column (0/1) 
+                              and inherited 'class' from t<sub>0</sub>.
         features (list): List of feature column names.
     
     Returns:
         model: Trained Stage 2 Random Forest classifier.
     """
-    # --- STAGE 1: Train on T0 + Stable T1 ---
+    # --- STAGE 1: Train on T<sub>0</sub> + Stable T<sub>1</sub> ---
     t1_stable = df_t1[df_t1['change'] == 0].copy()
     
     X_stage1 = pd.concat([df_t0[features], t1_stable[features]])
@@ -129,7 +125,7 @@ def train_common_ground(df_t0, df_t1, features):
     model_s1 = RandomForestClassifier(n_estimators=100, n_jobs=-1, random_state=42)
     model_s1.fit(X_stage1, y_stage1)
     
-    # --- PSEUDO-LABELING: Label Changed T1 ---
+    # --- PSEUDO-LABELING: Label Changed T<sub>1</sub> ---
     t1_changed = df_t1[df_t1['change'] == 1].copy()
     
     if len(t1_changed) > 0:
@@ -188,7 +184,7 @@ def run_llto_validation(df_t0, df_t1, features, target='class', n_folds=5, rando
         # We test on FOLD k at time t<sub>1</sub>
         test_mask = (df_t1['fold'] == fold)
         X_test = df_t1.loc[test_mask, features]
-        y_test = df_t1.loc[test_mask, target] # Ground Truth for T1
+        y_test = df_t1.loc[test_mask, target] # Ground Truth for T<sub>1</sub>
         
         if len(X_test) == 0:
             continue
@@ -205,7 +201,7 @@ def run_llto_validation(df_t0, df_t1, features, target='class', n_folds=5, rando
         
         # --- APPLY COMMON GROUND PIPELINE ---
         
-        # 1. Stage 1 (Bridge): Train on T0_other + Stable T1_other
+        # 1. Stage 1 (Bridge): Train on T<sub>0</sub>_other + Stable T<sub>1</sub>_other
         t1_stable = train_t1[train_t1['change'] == 0].copy()
         
         X_s1 = pd.concat([train_t0[features], t1_stable[features]])
@@ -214,7 +210,7 @@ def run_llto_validation(df_t0, df_t1, features, target='class', n_folds=5, rando
         rf_s1 = RandomForestClassifier(n_estimators=100, n_jobs=-1, random_state=random_state)
         rf_s1.fit(X_s1, y_s1)
         
-        # 2. Pseudo-Labeling: Predict Changed T1_other
+        # 2. Pseudo-Labeling: Predict Changed T<sub>1</sub>_other
         t1_changed = train_t1[train_t1['change'] == 1].copy()
         if len(t1_changed) > 0:
             t1_changed[target] = rf_s1.predict(t1_changed[features])
