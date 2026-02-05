@@ -1,6 +1,6 @@
 # Common Ground: A Semi-Supervised Approach to Scalable Time-Series Mapping
 
-![Common Ground Header](/assets/remote-sensing.png)
+![Common Ground Header](/assets/common_ground_header.png)
 
 **TL;DR:** We introduce "Common Ground," a new framework that combines unsupervised change detection with semi-supervised learning to automatically update land cover and invasive species maps over time. In quantitative experiments, this method improved classification predictions by **0.02 - 0.16** (F1-score) compared to baseline approaches, eliminating the need for manual re-labeling.
 
@@ -19,13 +19,18 @@ Today, we are sharing **"Common Ground,"** a semi-supervised learning (SSL) fram
 
 The core insight is simple: even in a rapidly changing landscape, **not everything changes**.
 
-Stable features (e.g., an established forest, a concrete building) provide a reliable link between the past ($t_0$) and the present ($t_1$). If we can automatically identify these stable areas, we can treat their old labels as valid for the current time. This gives us a high-confidence "anchor" dataset to retrain our models, without human intervention.
+Stable features (e.g., an established forest, a concrete building) provide a reliable link between the past (t<sub>0</sub>) and the present (t<sub>1</sub>). If we can automatically identify these stable areas, we can treat their old labels as valid for the current time. This gives us a high-confidence "anchor" dataset to retrain our models, without human intervention.
 
 Our framework executes this in two stages:
-1.  **Bridging the Gap:** We use unsupervised change detection algorithms (like IRMAD or CCDC) to separate **Stable** pixels from **Changed** pixels. We then train a "Stage 1" model on the the past ($t_0$) and the present ($t_1$) stable subset, allowing it to learn how the spectral signature of unchanged classes has shifted over time.
-2.  **Filling in the Blanks:** This Stage 1 model predicts labels for the **Changed** areas (Pseudo-labeling). Finally, a "Stage 2" model is trained on the full dataset— the past ($t_0$) + the present ($t_1$) stable subset (original labels) + the present ($t_1$) changed subset (pseudo-labels)—creating a robust classifier that covers the entire current landscape.
+
+![Bridging the Gap Illustration](/assets/conservation.png)
+
+1.  **Bridging the Gap:** We use unsupervised change detection algorithms (like IRMAD or CCDC) to separate **Stable** pixels from **Changed** pixels. We then train a "Stage 1" model on the the past (t<sub>0</sub>) and the present (t<sub>1</sub>) stable subset, allowing it to learn how the spectral signature of unchanged classes has shifted over time.
+2.  **Filling in the Blanks:** This Stage 1 model predicts labels for the **Changed** areas (Pseudo-labeling). Finally, a "Stage 2" model is trained on the full dataset— the past (t<sub>0</sub>) + the present (t<sub>1</sub>) stable subset (original labels) + the present (t<sub>1</sub>) changed subset (pseudo-labels)—creating a robust classifier that covers the entire current landscape.
 
 ## Key Results
+
+![Remote Sensing Analysis Results](/assets/remote-sensing.png)
 
 We evaluated Common Ground across three diverse case studies, ranging from fine-scale invasive tree species mapping to continental-scale land cover classification and for both multispectral and hyperspectral data.
 
@@ -47,15 +52,15 @@ We compared the industry-standard **Random Forest (RF)** against **TabPFN**, a n
 
 ## Improving Your Workflow: A Step-by-Step Guide
 
-Below, we break down how to implement the Common Ground method. We assume you have a dataset containing spectral features for two time points ($t_0$ and $t_1$) and labels for $t_0$.
+Below, we break down how to implement the Common Ground method. We assume you have a dataset containing spectral features for two time points (t<sub>0</sub> and t<sub>1</sub>) and labels for t<sub>0</sub>.
 
 ### Step 1: Detect Change
 Before running the Common Ground algorithm, you need to identify which reference samples have changed. In our paper, we used **IRMAD** (Iteratively Reweighted Multivariate Alteration Detection) or **CCDC** (Continuous Change Detection and Classification) to detect change, but you can use any unsupervised change detection method.
-*   **Stable ($0$):** Use $t_0$ label for $t_1$.
-*   **Changed ($1$):** $t_0$ label is invalid; needs pseudo-labeling.
+*   **Stable ($0$):** Use t<sub>0</sub> label for t<sub>1</sub>.
+*   **Changed ($1$):** t<sub>0</sub> label is invalid; needs pseudo-labeling.
 
 ### Step 2: Stage 1 Training (The Bridge)
-We train the first model on the "trusted" data: all original $t_0$ data plus the **Stable** subset of $t_1$.
+We train the first model on the "trusted" data: all original t<sub>0</sub> data plus the **Stable** subset of t<sub>1</sub>.
 ```python
 # Filter T1 data for non-changing (stable) pixels
 t1_stable = df_t1[df_t1['change'] == 0].copy()
@@ -70,7 +75,7 @@ rf_stage1.fit(X_stage1, y_stage1)
 ```
 
 ### Step 3: Pseudo-Labeling
-Now we use the "Bridge" model to guess the labels for the **Changed** areas in $t_1$.
+Now we use the "Bridge" model to guess the labels for the **Changed** areas in t<sub>1</sub>.
 ```python
 t1_changed = df_t1[df_t1['change'] == 1].copy()
 
@@ -80,7 +85,7 @@ if len(t1_changed) > 0:
 ```
 
 ### Step 4: Stage 2 Training (Common Ground)
-Finally, we train the robust model on *everything*: $t_0$, stable $t_1$, and pseudo-labeled changed $t_1$.
+Finally, we train the robust model on *everything*: t<sub>0</sub>, stable t<sub>1</sub>, and pseudo-labeled changed t<sub>1</sub>.
 ```python
 # Combine all datasets
 X_final = pd.concat([X_stage1, t1_changed[features]])
@@ -145,7 +150,7 @@ def train_common_ground(df_t0, df_t1, features):
 
 ## Advanced: Leave-Location-Time-Out (LLTO) Validation
 
-For rigorous validation, we use **Leave-Location-Time-Out (LLTO)**. This ensures that when we validate on a specific location at time $t_1$, the model hasn't seen the **same location** at time $t_0$ during training. This prevents spatial leakage and "background memorization," providing a true test of the model's ability to generalize over space and time.
+For rigorous validation, we use **Leave-Location-Time-Out (LLTO)**. This ensures that when we validate on a specific location at time t<sub>1</sub>, the model hasn't seen the **same location** at time t<sub>0</sub> during training. This prevents spatial leakage and "background memorization," providing a true test of the model's ability to generalize over space and time.
 
 ```python
 from sklearn.cluster import KMeans

@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
 
 :root {
-  --primary: #1b4332;
+  --primary: #132a13;
   --primary-light: #2d6a4f;
   --accent: #52b788;
   --accent-soft: rgba(82, 183, 136, 0.1);
   --bg: #ffffff;
   --bg-offset: #f8f9fa;
-  --text: #1b4332;
-  --text-muted: #4e6b5a;
+  --text: #2d3436;
+  --text-muted: #636e72;
   --border: #e9ecef;
   --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -211,15 +211,22 @@ section {
   line-height: 1.8;
 }
 
-.prose h1 {
-  font-size: 3.5rem;
-  margin-bottom: 2rem;
+.prose p,
+.prose li,
+.prose strong,
+.prose em {
+  font-size: 1.15rem;
+  margin-bottom: 1.5rem;
+  color: var(--text);
 }
 
-.prose p {
-  font-size: 1.15rem;
-  margin-bottom: 2rem;
-  color: #333;
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  color: var(--primary);
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 /* Responsive Utilities */
@@ -347,7 +354,7 @@ section {
   border-radius: 1rem !important;
   overflow: hidden !important;
   position: relative;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .code-container {
