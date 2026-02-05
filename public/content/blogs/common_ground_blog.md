@@ -1,8 +1,13 @@
 # Common Ground: A Semi-Supervised Approach to Scalable Time-Series Mapping
 
+![Common Ground Header](/assets/remote-sensing.png)
+
 **TL;DR:** We introduce "Common Ground," a new framework that combines unsupervised change detection with semi-supervised learning to automatically update land cover and invasive species maps over time. In quantitative experiments, this method improved classification predictions by **0.02 - 0.16** (F1-score) compared to baseline approaches, eliminating the need for manual re-labeling.
 
+**Read the full paper on arXiv:** [arXiv:2602.04373](http://arxiv.org/abs/2602.04373)
+
 ---
+
 
 Mapping the changing surface of our planet—whether getting a fix on invasive species or tracking urbanization—is a race against time. A machine learning model trained on satellite imagery from 2018 often fails when applied to 2023 data. The landscape changes, seasons shift, and atmospheric conditions fluctuate, leading to "label decay."
 
