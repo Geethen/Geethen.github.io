@@ -159,8 +159,8 @@ from sklearn.metrics import f1_score, accuracy_score
 def run_llto_validation(df_t0, df_t1, features, target='class', n_folds=5, random_state=42):
     """
     Performs Leave-Location-Time-Out (LLTO) cross-validation.
-    Ensures that when testing on a spatial fold at time t1, the corresponding 
-    fold at time t0 is EXCLUDED from training.
+    Ensures that when testing on a spatial fold at time t<sub>1</sub>, the corresponding 
+    fold at time t<sub>0</sub> is EXCLUDED from training.
     """
     print(f"Starting {n_folds}-fold LLTO Validation...")
     
@@ -185,7 +185,7 @@ def run_llto_validation(df_t0, df_t1, features, target='class', n_folds=5, rando
         print(f"  Processing Fold {fold+1}/{n_folds}...")
         
         # --- TEST SET DEFINITION ---
-        # We test on FOLD k at time t1
+        # We test on FOLD k at time t<sub>1</sub>
         test_mask = (df_t1['fold'] == fold)
         X_test = df_t1.loc[test_mask, features]
         y_test = df_t1.loc[test_mask, target] # Ground Truth for T1
@@ -194,12 +194,12 @@ def run_llto_validation(df_t0, df_t1, features, target='class', n_folds=5, rando
             continue
 
         # --- TRAINING SET DEFINITION (LLTO) ---
-        # Train on ALL other folds at t0 AND t1
-        # CRITICAL: Exclude FOLD k from t0 to prevent memorization
+        # Train on ALL other folds at t<sub>0</sub> AND t<sub>1</sub>
+        # CRITICAL: Exclude FOLD k from t<sub>0</sub> to prevent memorization
         
         train_t0 = df_t0[df_t0['fold'] != fold].copy()
         
-        # For t1 training data, we follow Common Ground logic:
+        # For t<sub>1</sub> training data, we follow Common Ground logic:
         # We take other folds' data, split into Stable/Changed for SSL
         train_t1 = df_t1[df_t1['fold'] != fold].copy()
         
@@ -219,7 +219,7 @@ def run_llto_validation(df_t0, df_t1, features, target='class', n_folds=5, rando
         if len(t1_changed) > 0:
             t1_changed[target] = rf_s1.predict(t1_changed[features])
             
-        # 3. Stage 2 (Final): Train on Everything (except test fold & t0-leakage)
+        # 3. Stage 2 (Final): Train on Everything (except test fold & t<sub>0</sub>-leakage)
         X_final = pd.concat([X_s1, t1_changed[features]])
         y_final = pd.concat([y_s1, t1_changed[target]])
         
