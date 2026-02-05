@@ -33,10 +33,10 @@ const Home = () => {
                             <span className="tag">My Mission</span>
                             <h2 style={{ fontSize: '3rem', marginBottom: '2rem' }}>Scaling Conservation through Technology</h2>
                             <p style={{ fontSize: '1.2rem', color: 'var(--text-muted)', marginBottom: '1.5rem' }}>
-                                I am an Ecologist and AI Researcher dedicated to developing scalable solutions for environmental monitoring. My work focuses on the intersection of Remote Sensing, Computer Vision, and Conservation Biology.
+                                I am an Ecologist and AI Researcher specializing in the application of Machine Learning to Earth Observation data. Currently a Post-doctoral Fellow at Stellenbosch University and an Associate at the University of the Witwatersrand, my work focuses on developing operational environmental monitoring systems and advancing uncertainty quantification using techniques like Conformal Prediction.
                             </p>
                             <p style={{ fontSize: '1.2rem', color: 'var(--text-muted)' }}>
-                                By leveraging satellite data and deep learning, I build tools that help us understand biodiversity loss, monitor invasive species, and quantify the impacts of climate change in real-time.
+                                With a PhD focused on using Remote Sensing and Google Earth Engine to manage invasive species, I have experience bridging academia and industry, having worked with NGOs like Natural State and Conservation Alpha to estimate forest metrics and biomass at scale.
                             </p>
                         </div>
                         <div style={{ position: 'relative' }}>
@@ -65,7 +65,7 @@ const Home = () => {
                                 zIndex: 10
                             }}>
                                 <p style={{ fontWeight: 700, fontSize: '1.2rem', marginBottom: '0.2rem' }}>Ecologist & AI Researcher</p>
-                                <p style={{ fontSize: '0.85rem', opacity: 0.8 }}>Bridging nature and technology with 10+ peer-reviewed publications.</p>
+                                <p style={{ fontSize: '0.85rem', opacity: 0.8 }}>Bridging nature and technology with nearly 10 years of experience.</p>
                             </div>
                         </div>
                     </div>
@@ -86,7 +86,7 @@ const Home = () => {
                             <div style={{ padding: '2.5rem' }}>
                                 <div className="tag" style={{ marginBottom: '1rem', fontSize: '0.7rem' }}>EO Data</div>
                                 <h3>Remote Sensing</h3>
-                                <p>Extracting high-resolution insights from satellite and drone imagery to track environmental changes at scale across diverse biomes.</p>
+                                <p>Extracting high-resolution insights from satellite or aerial imagery to track environmental changes at scale across diverse biomes.</p>
                             </div>
                         </div>
                         <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
@@ -96,7 +96,7 @@ const Home = () => {
                             <div style={{ padding: '2.5rem' }}>
                                 <div className="tag" style={{ marginBottom: '1rem', fontSize: '0.7rem' }}>Deep Learning</div>
                                 <h3>Computer Vision</h3>
-                                <p>Applying state-of-the-art CNNs and Vision Transformers to automate species identification and real-time habitat mapping.</p>
+                                <p>Applying state-of-the-art CNNs and Vision Transformers to automate species mapping and near real-time monitoring.</p>
                             </div>
                         </div>
                         <div className="card" style={{ padding: '2.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'center', background: 'var(--primary)', color: 'white' }}>
@@ -127,7 +127,7 @@ const Home = () => {
                             <a href="mailto:contact@geethen.com" className="btn btn-primary" style={{ background: 'white', color: 'var(--primary)', padding: '1.2rem 3rem', fontSize: '1.1rem' }}>
                                 Send an Email
                             </a>
-                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ borderColor: 'rgba(255,255,255,0.3)', color: 'white', padding: '1.2rem 3rem', fontSize: '1.1rem' }}>
+                            <a href="https://www.linkedin.com/in/geethen-singh-a06660106/" target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ borderColor: 'rgba(255,255,255,0.3)', color: 'white', padding: '1.2rem 3rem', fontSize: '1.1rem' }}>
                                 LinkedIn Profile
                             </a>
                         </div>

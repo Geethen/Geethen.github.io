@@ -24,7 +24,7 @@ const Footer = () => {
                         <h4 style={{ color: 'white', marginBottom: '1.5rem', fontFamily: 'Inter' }}>Connect</h4>
                         <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
                             <li><a href="https://scholar.google.com/citations?user=J4rtU2kAAAAJ&hl=en" style={{ color: 'rgba(255,255,255,0.7)' }}>Google Scholar</a></li>
-                            <li><a href="https://linkedin.com" style={{ color: 'rgba(255,255,255,0.7)' }}>LinkedIn</a></li>
+                            <li><a href="https://www.linkedin.com/in/geethen-singh-a06660106/" style={{ color: 'rgba(255,255,255,0.7)' }}>LinkedIn</a></li>
                             <li><a href="https://github.com" style={{ color: 'rgba(255,255,255,0.7)' }}>GitHub</a></li>
                         </ul>
                     </div>
