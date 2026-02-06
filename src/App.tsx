@@ -7,11 +7,14 @@ import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
     return (
         <Router>
-            <div className="app-container">
+            <ScrollToTop />
+            <div className="app-container relative">
+                <div className="grain-overlay" />
                 <Navbar />
                 <main>
                     <Routes>

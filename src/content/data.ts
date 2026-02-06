@@ -30,7 +30,7 @@ export const papers: Paper[] = [
         journal: "Remote Sensing 14 (16), 4101",
         tags: ["Remote Sensing", "Land Cover", "Data Analysis"],
         file: "/content/research/lulc-comparison.md",
-        link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J4rtU2kAAAAJ&citation_for_view=J4rtU2kAAAAJ:d1gkVwhDpl0C"
+        link: "https://www.mdpi.com/2072-4292/14/16/4101"
     },
     {
         id: "water-hyacinth",
@@ -40,7 +40,7 @@ export const papers: Paper[] = [
         journal: "Remote Sensing 12 (24), 4021",
         tags: ["Invasive Species", "Water Monitoring", "Deep Learning"],
         file: "/content/research/water-hyacinth.md",
-        link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J4rtU2kAAAAJ&citation_for_view=J4rtU2kAAAAJ:u-x6o8ySG0sC"
+        link: "https://www.mdpi.com/2072-4292/12/24/4021"
     },
     {
         id: "uncertainty-quantification",
@@ -50,7 +50,7 @@ export const papers: Paper[] = [
         journal: "Scientific Reports 14 (1), 16166",
         tags: ["Machine Learning", "Probabilistic ML", "Conformal Prediction"],
         file: "/content/research/uncertainty-quantification.md",
-        link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J4rtU2kAAAAJ&citation_for_view=J4rtU2kAAAAJ:2osOgNQ5qMEC",
+        link: "https://www.nature.com/articles/s41598-024-67252-0",
         highlights: [
             "Introduces Conformal Prediction for robust EO metrics",
             "Statistically sound uncertainty intervals for satellite data",
@@ -66,7 +66,7 @@ export const papers: Paper[] = [
         journal: "Nature, 1-9",
         tags: ["Biodiversity", "Conservation", "Africa"],
         file: "/content/research/biodiversity-intactness.md",
-        link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J4rtU2kAAAAJ&citation_for_view=J4rtU2kAAAAJ:eQOLeE2rZwMC"
+        link: "https://www.nature.com/articles/s41586-025-09781-7"
     },
     {
         id: "explainable-ml",
@@ -76,7 +76,7 @@ export const papers: Paper[] = [
         journal: "Environmental Monitoring and Assessment 197 (11), 1172",
         tags: ["XAI", "Invasive Species", "Earth Observation"],
         file: "/content/research/explainable-ml.md",
-        link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J4rtU2kAAAAJ&citation_for_view=J4rtU2kAAAAJ:YsMSGLbcyi4C"
+        link: "https://link.springer.com/article/10.1007/s10661-025-14517-1"
     },
     {
         id: "tree-fern-prediction",
@@ -86,7 +86,7 @@ export const papers: Paper[] = [
         journal: "South African Journal of Botany 178, 390-399",
         tags: ["Climate Change", "Botany", "Species Distribution"],
         file: "/content/research/tree-fern-prediction.md",
-        link: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=J4rtU2kAAAAJ&citation_for_view=J4rtU2kAAAAJ:Tyk-4Ss8FVUC"
+        link: "https://doi.org/10.1016/j.sajb.2025.01.046"
     }
 ];
 
