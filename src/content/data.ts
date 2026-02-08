@@ -87,7 +87,62 @@ export const papers: Paper[] = [
         tags: ["Climate Change", "Botany", "Species Distribution"],
         file: "/content/research/tree-fern-prediction.md",
         link: "https://doi.org/10.1016/j.sajb.2025.01.046"
-    }
+    },
+    {
+        id: "global-10-m-land-use-land-cover-datasets-a-comparison-of-dynamic-world-world-cover-and-esri-land-cover-remote-sens-14-4101",
+        title: "Global 10 m Land Use Land Cover Datasets: A Comparison of Dynamic World, World Cover and Esri Land Cover, Remote Sens., 14, 4101",
+        authors: "Unknown",
+        date: "2022",
+        journal: "Unknown",
+        tags: ["Research"],
+        file: "/content/research/todo-global-10-m-land-use-land-cover-datasets-a-comparison-of-dynamic-world-world-cover-and-esri-land-cover-remote-sens-14-4101.md",
+        link: "https://scholar.google.com/scholar?oi=bibs&hl=en&cluster=0"
+    },
+,
+    {
+        id: "global-10-m-land-use-land-cover-datasets-a-comparison-of-dynamic-world-world-cover-and-esri-land-cover-remote-sens-14-16-4101",
+        title: "Global 10 m land use land cover datasets: a comparison of dynamic world, world cover and Esri land cover. Remote Sens 14 (16): 4101",
+        authors: "Unknown",
+        date: "2022",
+        journal: "Unknown",
+        tags: ["Research"],
+        file: "/content/research/todo-global-10-m-land-use-land-cover-datasets-a-comparison-of-dynamic-world-world-cover-and-esri-land-cover-remote-sens-14-16-4101.md",
+        link: "https://scholar.google.com/scholar?oi=bibs&hl=en&cluster=0"
+    },
+,
+    {
+        id: "an-earth-observation-and-explainable-machine-learning-approach-for-determining-the-drivers-of-invasive-species-a-water-hyacinth-case-study",
+        title: "An earth observation and explainable machine learning approach for determining the drivers of invasive species—a water hyacinth case study",
+        authors: "Unknown",
+        date: "2025",
+        journal: "Unknown",
+        tags: ["Research"],
+        file: "/content/research/todo-an-earth-observation-and-explainable-machine-learning-approach-for-determining-the-drivers-of-invasive-species-a-water-hyacinth-case-study.md",
+        link: "https://scholar.google.com/scholar?oi=bibs&hl=en&cluster=0"
+    },
+,
+    {
+        id: "the-invaded-range-of-the-tree-fern-sphaeropteris-cooperi-is-predicted-to-shrink-in-two-southern-hemisphere-biodiversity-hotspots",
+        title: "The invaded range of the tree fern Sphaeropteris cooperi is predicted to shrink in two southern hemisphere biodiversity hotspots",
+        authors: "Unknown",
+        date: "2025",
+        journal: "Unknown",
+        tags: ["Research"],
+        file: "/content/research/todo-the-invaded-range-of-the-tree-fern-sphaeropteris-cooperi-is-predicted-to-shrink-in-two-southern-hemisphere-biodiversity-hotspots.md",
+        link: "https://scholar.google.com/scholar?oi=bibs&hl=en&cluster=0"
+    },
+,
+    {
+        id: "the-application-of-machine-learning-methods-to-satellite-data-for-the-management-of-invasive-water-hyacinth",
+        title: "The application of machine learning methods to satellite data for the management of invasive water hyacinth",
+        authors: "Unknown",
+        date: "2023",
+        journal: "Unknown",
+        tags: ["Research"],
+        file: "/content/research/todo-the-application-of-machine-learning-methods-to-satellite-data-for-the-management-of-invasive-water-hyacinth.md",
+        link: "https://scholar.google.com/scholar?oi=bibs&hl=en&cluster=0"
+    },
+
 ];
 
 export const blogs: BlogEntry[] = [
