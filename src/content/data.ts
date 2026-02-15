@@ -142,6 +142,17 @@ export const papers: Paper[] = [
         file: "/content/research/todo-the-application-of-machine-learning-methods-to-satellite-data-for-the-management-of-invasive-water-hyacinth.md",
         link: "https://scholar.google.com/scholar?oi=bibs&hl=en&cluster=0"
     },
+,
+    {
+        id: "reducing-the-labeling-burden-in-time-series-mapping-using-common-ground-a-semi-automated-approach-to-tracking-changes-in-land-cover-and-species-over-time",
+        title: "Reducing the labeling burden in time-series mapping using Common Ground: a semi-automated approach to tracking changes in land cover and species over time",
+        authors: "Unknown",
+        date: "2026",
+        journal: "Unknown",
+        tags: ["Research"],
+        file: "/content/research/todo-reducing-the-labeling-burden-in-time-series-mapping-using-common-ground-a-semi-automated-approach-to-tracking-changes-in-land-cover-and-species-over-time.md",
+        link: "https://scholar.google.com/scholar?oi=bibs&hl=en&cluster=0"
+    },
 
 ];
 
