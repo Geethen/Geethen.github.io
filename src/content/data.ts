@@ -98,7 +98,7 @@ export const papers: Paper[] = [
         file: "/content/research/todo-global-10-m-land-use-land-cover-datasets-a-comparison-of-dynamic-world-world-cover-and-esri-land-cover-remote-sens-14-4101.md",
         link: "https://scholar.google.com/scholar?oi=bibs&hl=en&cluster=0"
     },
-,
+    ,
     {
         id: "global-10-m-land-use-land-cover-datasets-a-comparison-of-dynamic-world-world-cover-and-esri-land-cover-remote-sens-14-16-4101",
         title: "Global 10 m land use land cover datasets: a comparison of dynamic world, world cover and Esri land cover. Remote Sens 14 (16): 4101",
@@ -109,7 +109,7 @@ export const papers: Paper[] = [
         file: "/content/research/todo-global-10-m-land-use-land-cover-datasets-a-comparison-of-dynamic-world-world-cover-and-esri-land-cover-remote-sens-14-16-4101.md",
         link: "https://scholar.google.com/scholar?oi=bibs&hl=en&cluster=0"
     },
-,
+    ,
     {
         id: "an-earth-observation-and-explainable-machine-learning-approach-for-determining-the-drivers-of-invasive-species-a-water-hyacinth-case-study",
         title: "An earth observation and explainable machine learning approach for determining the drivers of invasive species—a water hyacinth case study",
@@ -120,7 +120,7 @@ export const papers: Paper[] = [
         file: "/content/research/todo-an-earth-observation-and-explainable-machine-learning-approach-for-determining-the-drivers-of-invasive-species-a-water-hyacinth-case-study.md",
         link: "https://scholar.google.com/scholar?oi=bibs&hl=en&cluster=0"
     },
-,
+    ,
     {
         id: "reducing-the-labeling-burden-in-time-series-mapping-using-common-ground-a-semi-automated-approach-to-tracking-changes-in-land-cover-and-species-over-time",
         title: "Reducing the labeling burden in time-series mapping using Common Ground: a semi-automated approach to tracking changes in land cover and species over time",
@@ -131,7 +131,7 @@ export const papers: Paper[] = [
         file: "/content/research/todo-reducing-the-labeling-burden-in-time-series-mapping-using-common-ground-a-semi-automated-approach-to-tracking-changes-in-land-cover-and-species-over-time.md",
         link: "https://scholar.google.com/scholar?oi=bibs&hl=en&cluster=0"
     },
-,
+    ,
     {
         id: "the-invaded-range-of-the-tree-fern-sphaeropteris-cooperi-is-predicted-to-shrink-in-two-southern-hemisphere-biodiversity-hotspots",
         title: "The invaded range of the tree fern Sphaeropteris cooperi is predicted to shrink in two southern hemisphere biodiversity hotspots",
@@ -142,7 +142,7 @@ export const papers: Paper[] = [
         file: "/content/research/todo-the-invaded-range-of-the-tree-fern-sphaeropteris-cooperi-is-predicted-to-shrink-in-two-southern-hemisphere-biodiversity-hotspots.md",
         link: "https://scholar.google.com/scholar?oi=bibs&hl=en&cluster=0"
     },
-,
+    ,
     {
         id: "the-application-of-machine-learning-methods-to-satellite-data-for-the-management-of-invasive-water-hyacinth",
         title: "The Application of Machine Learning Methods to Satellite Data for the Management of Invasive Water Hyacinth",
