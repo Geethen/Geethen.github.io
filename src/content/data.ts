@@ -87,7 +87,73 @@ export const papers: Paper[] = [
         tags: ["Climate Change", "Botany", "Species Distribution"],
         file: "/content/research/tree-fern-prediction.md",
         link: "https://doi.org/10.1016/j.sajb.2025.01.046"
-    }
+    },
+    {
+        id: "global-10-m-land-use-land-cover-datasets-a-comparison-of-dynamic-world-world-cover-and-esri-land-cover-remote-sens-14-4101",
+        title: "Global 10 m Land Use Land Cover Datasets: A Comparison of Dynamic World, World Cover and Esri Land Cover, Remote Sens., 14, 4101",
+        authors: "ZS Venter, DN Barton, T Chakraborty, T Simensen, G Singh",
+        date: "Unknown",
+        journal: "",
+        tags: ["Research"],
+        file: "/content/research/todo-global-10-m-land-use-land-cover-datasets-a-comparison-of-dynamic-world-world-cover-and-esri-land-cover-remote-sens-14-4101.md",
+        link: "https://scholar.google.com/scholar?oi=bibs&hl=en&cluster=0"
+    },
+,
+    {
+        id: "global-10-m-land-use-land-cover-datasets-a-comparison-of-dynamic-world-world-cover-and-esri-land-cover-remote-sens-14-16-4101",
+        title: "Global 10 m land use land cover datasets: a comparison of dynamic world, world cover and Esri land cover. Remote Sens 14 (16): 4101",
+        authors: "ZS Venter, DN Barton, T Chakraborty, T Simensen, G Singh",
+        date: "Unknown",
+        journal: "",
+        tags: ["Research"],
+        file: "/content/research/todo-global-10-m-land-use-land-cover-datasets-a-comparison-of-dynamic-world-world-cover-and-esri-land-cover-remote-sens-14-16-4101.md",
+        link: "https://scholar.google.com/scholar?oi=bibs&hl=en&cluster=0"
+    },
+,
+    {
+        id: "an-earth-observation-and-explainable-machine-learning-approach-for-determining-the-drivers-of-invasive-species-a-water-hyacinth-case-study",
+        title: "An earth observation and explainable machine learning approach for determining the drivers of invasive species—a water hyacinth case study",
+        authors: "G Singh, B Rosman, MJ Byrne, C Reynolds",
+        date: "2025",
+        journal: "Environmental Monitoring and Assessment 197 (11), 1172",
+        tags: ["Research"],
+        file: "/content/research/todo-an-earth-observation-and-explainable-machine-learning-approach-for-determining-the-drivers-of-invasive-species-a-water-hyacinth-case-study.md",
+        link: "https://scholar.google.com/scholar?oi=bibs&hl=en&cluster=0"
+    },
+,
+    {
+        id: "reducing-the-labeling-burden-in-time-series-mapping-using-common-ground-a-semi-automated-approach-to-tracking-changes-in-land-cover-and-species-over-time",
+        title: "Reducing the labeling burden in time-series mapping using Common Ground: a semi-automated approach to tracking changes in land cover and species over time",
+        authors: "G Singh, JA Slingsby, TB Robinson, G Moncrieff",
+        date: "2026",
+        journal: "arXiv preprint arXiv:2602.04373",
+        tags: ["Research"],
+        file: "/content/research/todo-reducing-the-labeling-burden-in-time-series-mapping-using-common-ground-a-semi-automated-approach-to-tracking-changes-in-land-cover-and-species-over-time.md",
+        link: "https://scholar.google.com/scholar?oi=bibs&hl=en&cluster=0"
+    },
+,
+    {
+        id: "the-invaded-range-of-the-tree-fern-sphaeropteris-cooperi-is-predicted-to-shrink-in-two-southern-hemisphere-biodiversity-hotspots",
+        title: "The invaded range of the tree fern Sphaeropteris cooperi is predicted to shrink in two southern hemisphere biodiversity hotspots",
+        authors: "ML Van den Berg, G Singh, EJ McCulloch-Jones, M Rouget, ...",
+        date: "2025",
+        journal: "South African Journal of Botany 178, 390-399",
+        tags: ["Research"],
+        file: "/content/research/todo-the-invaded-range-of-the-tree-fern-sphaeropteris-cooperi-is-predicted-to-shrink-in-two-southern-hemisphere-biodiversity-hotspots.md",
+        link: "https://scholar.google.com/scholar?oi=bibs&hl=en&cluster=0"
+    },
+,
+    {
+        id: "the-application-of-machine-learning-methods-to-satellite-data-for-the-management-of-invasive-water-hyacinth",
+        title: "The Application of Machine Learning Methods to Satellite Data for the Management of Invasive Water Hyacinth",
+        authors: "G Singh",
+        date: "2023",
+        journal: "PQDT-Global",
+        tags: ["Research"],
+        file: "/content/research/todo-the-application-of-machine-learning-methods-to-satellite-data-for-the-management-of-invasive-water-hyacinth.md",
+        link: "https://scholar.google.com/scholar?oi=bibs&hl=en&cluster=0"
+    },
+
 ];
 
 export const blogs: BlogEntry[] = [

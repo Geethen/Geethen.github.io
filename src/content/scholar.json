@@ -1,13 +1,11 @@
 {
-    "totalCitations": 471,
-    "hIndex": 3,
-    "lastUpdated": "2026-02-05",
-    "citations": {
-        "lulc-comparison": 355,
-        "water-hyacinth": 80,
-        "uncertainty-quantification": 35,
-        "biodiversity-intactness": 1,
-        "explainable-ml": 0,
-        "tree-fern-prediction": 0
-    }
+  "totalCitations": 525,
+  "hIndex": 5,
+  "lastUpdated": "2026-03-02",
+  "citations": {
+    "lulc-comparison": 372,
+    "water-hyacinth": 82,
+    "uncertainty-quantification": 43,
+    "biodiversity-intactness": 1
+  }
 }

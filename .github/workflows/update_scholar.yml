@@ -21,7 +21,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          pip install scholarly
+          pip install requests beautifulsoup4
 
       - name: Run Update Script
         run: python scripts/update_scholar.py
