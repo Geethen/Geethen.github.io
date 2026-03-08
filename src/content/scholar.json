@@ -1,15 +1,16 @@
 {
-  "totalCitations": 498,
+  "totalCitations": 527,
   "hIndex": 5,
-  "lastUpdated": "2026-02-15",
+  "lastUpdated": "2026-03-08",
   "citations": {
-    "lulc-comparison": 355,
-    "water-hyacinth": 79,
-    "uncertainty-quantification": 37,
+    "lulc-comparison": 373,
+    "water-hyacinth": 82,
+    "uncertainty-quantification": 43,
     "global-10-m-land-use-land-cover-datasets-a-comparison-of-dynamic-world-world-cover-and-esri-land-cover-remote-sens-14-4101": 20,
     "global-10-m-land-use-land-cover-datasets-a-comparison-of-dynamic-world-world-cover-and-esri-land-cover-remote-sens-14-16-4101": 6,
-    "biodiversity-intactness": 1,
-    "an-earth-observation-and-explainable-machine-learning-approach-for-determining-the-drivers-of-invasive-species-a-water-hyacinth-case-study": 0,
+    "biodiversity-intactness": 2,
+    "an-earth-observation-and-explainable-machine-learning-approach-for-determining-the-drivers-of-invasive-species-a-water-hyacinth-case-study": 1,
+    "reducing-the-labeling-burden-in-time-series-mapping-using-common-ground-a-semi-automated-approach-to-tracking-changes-in-land-cover-and-species-over-time": 0,
     "the-invaded-range-of-the-tree-fern-sphaeropteris-cooperi-is-predicted-to-shrink-in-two-southern-hemisphere-biodiversity-hotspots": 0,
     "the-application-of-machine-learning-methods-to-satellite-data-for-the-management-of-invasive-water-hyacinth": 0
   }
