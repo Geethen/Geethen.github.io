@@ -158,6 +158,14 @@ export const papers: Paper[] = [
 
 export const blogs: BlogEntry[] = [
     {
+        id: "timber-native-c-inference",
+        title: "Your Random Forest Runs in 0.09 Microseconds Now",
+        date: "June 22, 2026",
+        summary: "How Timber compiles tree-based models to native C for dramatically faster inference in remote sensing and edge deployments.",
+        file: "/content/blogs/timber_blogpost.md",
+        tags: ["Remote Sensing", "Machine Learning", "Inference Optimization"]
+    },
+    {
         id: "common-ground",
         title: "Common Ground: A Semi-Supervised Approach to Scalable Time-Series Mapping",
         date: "February 5, 2026",
