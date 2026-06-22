@@ -153,6 +153,17 @@ export const papers: Paper[] = [
         file: "/content/research/todo-the-application-of-machine-learning-methods-to-satellite-data-for-the-management-of-invasive-water-hyacinth.md",
         link: "https://scholar.google.com/scholar?oi=bibs&hl=en&cluster=0"
     },
+,
+    {
+        id: "paddy-straw-and-water-hyacinth-silage",
+        title: "Paddy straw and water hyacinth silage.",
+        authors: "SS Chibbar, GD Singh",
+        date: "Unknown",
+        journal: "",
+        tags: ["Research"],
+        file: "/content/research/todo-paddy-straw-and-water-hyacinth-silage.md",
+        link: "https://scholar.google.com/scholar?oi=bibs&hl=en&cluster=0"
+    },
 
 ];
 
