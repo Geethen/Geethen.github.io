@@ -164,6 +164,17 @@ export const papers: Paper[] = [
         file: "/content/research/todo-paddy-straw-and-water-hyacinth-silage.md",
         link: "https://scholar.google.com/scholar?oi=bibs&hl=en&cluster=0"
     },
+,
+    {
+        id: "to-south-africa-and-beyond-local-distribution-and-global-invasion-potential-of-the-alien-anemone-cereus-pedunculatus",
+        title: "To South Africa and beyond: Local distribution and global invasion potential of the alien anemone Cereus pedunculatus",
+        authors: "MN Andersen, G Singh, TB Robinson",
+        date: "2026",
+        journal: "Aquatic Invasions 21 (3), 147-166",
+        tags: ["Research"],
+        file: "/content/research/todo-to-south-africa-and-beyond-local-distribution-and-global-invasion-potential-of-the-alien-anemone-cereus-pedunculatus.md",
+        link: "https://scholar.google.com/scholar?oi=bibs&hl=en&cluster=0"
+    },
 
 ];
 
